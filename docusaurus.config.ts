@@ -44,6 +44,13 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -62,6 +69,18 @@ const config: Config = {
   ],
 
   themeConfig: {
+    metadata: [
+      {name: 'keywords', content: 'Zero-Knowledge Authentication, Biometric Privacy, Web3 Identity, Praman Network, zk-SNARK, Sybil resistance, biometric ZK-proofs'},
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: 'Praman Network Docs - Zero-Knowledge Biometric Identity Authentication'},
+      {name: 'twitter:description', content: 'Explore Praman Network technical documentation, installation guides, and SDK API reference for Zero-Knowledge Web3 Authentication and Biometric Privacy.'},
+      {name: 'twitter:image', content: 'https://docs.praman.network/img/logo.png'},
+      {name: 'og:title', content: 'Praman Network Docs - Zero-Knowledge Biometric Identity Authentication'},
+      {name: 'og:description', content: 'Explore Praman Network technical documentation, installation guides, and SDK API reference for Zero-Knowledge Web3 Authentication and Biometric Privacy.'},
+      {name: 'og:image', content: 'https://docs.praman.network/img/logo.png'},
+      {name: 'og:type', content: 'website'},
+      {name: 'og:url', content: 'https://docs.praman.network'},
+    ],
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: true,
